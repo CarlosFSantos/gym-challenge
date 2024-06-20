@@ -69,4 +69,24 @@ header{
     margin: 45px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
+    /*SOMBRA*/
+    box-shadow: 10px 10px 6px -2px rgba(0, 0, 0, 0.4);
+
+    /*animation*/
+    
+    animation-name: up;
+    animation-duration: 800ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+        
+    }
+    to{
+        opacity: 1;
+    }
 }
