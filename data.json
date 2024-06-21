@@ -1,0 +1,20 @@
+{
+  "instructors": [
+    {
+      "avatar_url": "http://google.com",
+      "name": "Carlos",
+      "birth": "2001-04-06",
+      "gender": "M",
+      "services": "Musculação, Crossfit",
+      "created_at": 1719007809749
+    },
+    {
+      "avatar_url": "http://google.com",
+      "name": "Carlo",
+      "birth": 991612800000,
+      "gender": "M",
+      "services": "Musculação, Crossfit",
+      "created_at": 1719007968253
+    }
+  ]
+}
