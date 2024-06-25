@@ -1,0 +1,54 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="card">
+    <section 
+        class="avatar" 
+        id="avatar" 
+        style="background-size: cover; 
+            background: url({{instructor.avatar_url}})">
+    </section>
+    <section class="details">
+        <h3>Detalhes</h3>
+
+        <div class="item">
+            <div>Instructor</div>
+            <div>{{instructor.name}}</div>
+        </div>
+        <div class="item">
+            <div>Idade</div>
+            <div>{{instructor.age}}</div>
+        </div>
+        <div class="item">
+            <div>Sexo</div>
+            <div>{{"Masculino" if instructor.gender == "M" else "Feminino"}}</div>
+        </div>
+        <div class="item">
+            <div>Acompanhamento</div>
+            <div>
+                {%for service in instructor.services%}
+                    <span>{{service}}</span>
+                {%endfor%} 
+            </div>
+        <div class="item">
+            <div> Desde</div>
+            <div>{{instructor.created_at}}</div>
+        </div>
+    </section>
+</div>
+
+<script>
+    const CLIENT_ID = 'Lr8xi0QHVpcF6BC5RPCgMYz4fZQkTRvcKp01Fj_U9G4'; // Substitua 'YOUR_ACCESS_KEY' pelo seu Client-ID
+    const COLLECTION_ID = '8325170';
+    const ITEMS_PER_PAGE = 30
+    fetch(`https://api.unsplash.com/collections/${COLLECTION_ID}/photos?client_id=${CLIENT_ID}&${ITEMS_PER_PAGE}`)
+    .then(response => response.json())
+    .then(data => {
+        // Seleciona uma imagem aleatoriamente da coleção
+        const randomImage = data[Math.floor(Math.random() * data.length)];
+        const imageUrl = randomImage.urls.regular;
+        document.getElementById('avatar').style.backgroundImage = `url(${imageUrl})`;
+    })
+    .catch(error => console.error('Error fetching image:', error));
+</script>
+{% endblock content %}
