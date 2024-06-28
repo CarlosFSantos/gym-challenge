@@ -1,7 +1,7 @@
 {
   "instructors": [
     {
-      "avatar_url": "http://google.com",
+      "avatar_url": "`https://api.unsplash.com/collections/${COLLECTION_ID}/photos?client_id=${CLIENT_ID}&${ITEMS_PER_PAGE}`",
       "birth": 986515200000,
       "created_at": 1719347343646,
       "id": 1,
