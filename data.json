@@ -1,11 +1,11 @@
 {
   "instructors": [
     {
-      "avatar_url": "`https://api.unsplash.com/collections/${COLLECTION_ID}/photos?client_id=${CLIENT_ID}&${ITEMS_PER_PAGE}`",
+      "avatar_url": "http://google.com",
       "birth": 986515200000,
       "created_at": 1719347343646,
-      "id": 1,
-      "name": "Carlos",
+      "id": "1",
+      "name": "Carlos Fogaca",
       "services": "Musculação, Crossfit, Natação",
       "gender": "M"
     },
@@ -17,6 +17,15 @@
       "gender": "M",
       "services": "Crossfit, Musculacao",
       "created_at": 1719348331286
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://google.com",
+      "name": "Jose",
+      "birth": 56332800000,
+      "gender": "M",
+      "services": "Musculação, Crossfit",
+      "created_at": 1720129846677
     }
   ]
 }
