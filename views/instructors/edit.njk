@@ -1,21 +1,32 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-<form class="card" method="POST" action="/instructors?_method=PUT">
+<div class="card">
     <section 
         class="avatar" 
         id="avatar" 
         style="background-size: cover;">
     </section>
     <section class="details">
-        <h3>EDITAR INSTRUTOR</h3>
+        <form  method="POST" action="/instructors?_method=PUT">
+            <h3>EDITAR INSTRUTOR</h3>
 
-        {%include 'instructors/fields.njk'%}
+            {%include 'instructors/fields.njk'%}
 
-        <input type="hidden" name="id" value={{instructor.id}}>
-        
+            <input type="hidden" name="id" value={{instructor.id}}>
+        </form>  
+        <form id='form-delete' method="POST" action="/instructors?_method=DELETE">
+            <input type="hidden" name="id" value={{instructor.id}}>
+            <button type="submit">DELETAR</button>
+        </form>  
     </section>
-</form>
+    
+
+    
+</div>
+
+
+
 
 <script>
     const CLIENT_ID = 'Lr8xi0QHVpcF6BC5RPCgMYz4fZQkTRvcKp01Fj_U9G4'; // Substitua 'YOUR_ACCESS_KEY' pelo seu Client-ID
