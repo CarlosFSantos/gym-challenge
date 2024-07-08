@@ -1,57 +1,13 @@
 {
   "instructors": [
     {
-      "avatar_url": "http://google.com",
-      "birth": 986515200000,
-      "created_at": 1719347343646,
-      "id": 1,
-      "name": "Carlos Fogaca",
-      "services": "Musculação, Crossfit, Natação",
-      "gender": "M"
-    },
-    {
       "id": 3,
-      "avatar_url": "http://google.com",
-      "name": "Jose",
-      "birth": 56332800000,
+      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "Grilo",
+      "birth": 881280000000,
       "gender": "M",
       "services": "Musculação, Crossfit",
-      "created_at": 1720129846677
-    },
-    {
-      "id": 4,
-      "birth": null,
-      "created_at": 1720138311389
-    },
-    {
-      "id": 5,
-      "birth": null,
-      "created_at": 1720138376947
-    },
-    {
-      "id": 6,
-      "birth": null,
-      "created_at": 1720138444938
-    },
-    {
-      "id": 7,
-      "birth": null,
-      "created_at": 1720138584581
-    },
-    {
-      "id": 8,
-      "birth": null,
-      "created_at": 1720138876227
-    },
-    {
-      "id": 9,
-      "birth": null,
-      "created_at": 1720138914957
-    },
-    {
-      "id": 10,
-      "birth": null,
-      "created_at": 1720139185207
+      "created_at": 1720461617496
     }
   ]
 }
