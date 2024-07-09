@@ -5,8 +5,7 @@
     <section 
         class="avatar" 
         id="avatar" 
-        style="background-size: cover; 
-            background: url({{instructor.avatar_url}})">
+        style="background: url({{instructor.avatar_url}}); background-size: cover">
     </section>
     <section class="details">
         <h3>Detalhes</h3>
@@ -35,22 +34,9 @@
             <div>{{instructor.created_at}}</div>
         </div>
 
-        <a href="#" class="button">Editar</a>
+        <a href="/instructors/{{instructor.id}}/edit" class="button">Editar</a>
     </section>
 </div>
 
-<script>
-    const CLIENT_ID = 'Lr8xi0QHVpcF6BC5RPCgMYz4fZQkTRvcKp01Fj_U9G4'; // Substitua 'YOUR_ACCESS_KEY' pelo seu Client-ID
-    const COLLECTION_ID = '8325170';
-    const ITEMS_PER_PAGE = 30
-    fetch(`https://api.unsplash.com/collections/${COLLECTION_ID}/photos?client_id=${CLIENT_ID}&${ITEMS_PER_PAGE}`)
-    .then(response => response.json())
-    .then(data => {
-        // Seleciona uma imagem aleatoriamente da coleção
-        const randomImage = data[Math.floor(Math.random() * data.length)];
-        const imageUrl = randomImage.urls.regular;
-        document.getElementById('avatar').style.backgroundImage = `url(${imageUrl})`;
-    })
-    .catch(error => console.error('Error fetching image:', error));
-</script>
+
 {% endblock content %}

@@ -1,22 +1,13 @@
 {
   "instructors": [
     {
-      "avatar_url": "`https://api.unsplash.com/collections/${COLLECTION_ID}/photos?client_id=${CLIENT_ID}&${ITEMS_PER_PAGE}`",
-      "birth": 986515200000,
-      "created_at": 1719347343646,
-      "id": 1,
-      "name": "Carlos",
-      "services": "Musculação, Crossfit, Natação",
-      "gender": "M"
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://google.com",
-      "name": "sadasd",
-      "birth": -23890291200000,
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "Grilo",
+      "birth": 881280000000,
       "gender": "M",
-      "services": "Crossfit, Musculacao",
-      "created_at": 1719348331286
+      "services": "Musculação, Crossfit",
+      "created_at": 1720461617496
     }
   ]
 }
