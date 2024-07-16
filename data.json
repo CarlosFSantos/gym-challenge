@@ -1,10 +1,23 @@
 {
+  "members": [
+    {
+      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "Carlos Fogaca",
+      "email": "carlosfogacasantos@hotmail.com",
+      "birth": 986515200000,
+      "gender": "M",
+      "blood": "O1",
+      "weight": "90",
+      "height": "167",
+      "id": 1
+    }
+  ],
   "instructors": [
     {
       "id": 3,
       "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "name": "Grilo",
-      "birth": 881280000000,
+      "birth": 818121600000,
       "gender": "M",
       "services": "Musculação, Crossfit",
       "created_at": 1720461617496

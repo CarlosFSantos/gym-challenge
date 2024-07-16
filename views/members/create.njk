@@ -1,41 +1,19 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-<div class="card">
+<form class="card" method="POST" action="/members">
     <section 
         class="avatar" 
         id="avatar" 
         style="background-size: cover;">
     </section>
     <section class="details">
-        <form  method="POST" action="/instructors?_method=PUT">
-            <h3>EDITAR INSTRUTOR</h3>
+        <h3>Novo Membro</h3>
 
-            {%include 'instructors/fields.njk'%}
-
-            <input type="hidden" name="id" value={{instructor.id}}>
-        </form>  
-        <form id='form-delete' method="POST" action="/instructors?_method=DELETE">
-            <input type="hidden" name="id" value={{instructor.id}}>
-            <button type="submit">DELETAR</button>
-        </form>  
+        {%include 'members/fields.njk'%}
+        
     </section>
-    
-
-    
-</div>
-
-<script>
-    const formDelete = document.querySelector("#form-delete")
-    formDelete.addEventListener("submit", function(event){
-        const confirmation = confirm("Deseja Deletar?")
-        if (!confirmation){
-            event.preventDefault()
-        }
-    })         
-</script>
-
-
+</form>
 
 <script>
     const CLIENT_ID = 'Lr8xi0QHVpcF6BC5RPCgMYz4fZQkTRvcKp01Fj_U9G4'; // Substitua 'YOUR_ACCESS_KEY' pelo seu Client-ID
