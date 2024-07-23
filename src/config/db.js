@@ -1,5 +1,5 @@
 const {Pool} = require("pg")
-//const { password, port, database, user } = require("pg/lib/defaults")
+
 
 module.exports = new Pool({
     user: "postgres",
