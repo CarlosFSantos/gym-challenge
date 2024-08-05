@@ -38,13 +38,13 @@ function paginate (selectedPage, totalpages) {
     return pages
 }
 
-const pagination = document.querySelector(".pagination")
-const filter = pagination.dataset.filter;
-const page = +pagination.dataset.page;
-const total = +pagination.dataset.total;
-const pages = paginate(page, total)
+function createPagination(pagination){
+    const filter = pagination.dataset.filter;
+    const page = +pagination.dataset.page;
+    const total = +pagination.dataset.total;
+    const pages = paginate(page, total)
 
-let elements = ""
+    let elements = ""
 
 for (let page of pages){
     if(String(page).includes("...")){
@@ -59,6 +59,14 @@ for (let page of pages){
 }
 
 pagination.innerHTML = elements
+}
+const pagination = document.querySelector(".pagination")
+
+if (pagination){
+    createPagination(pagination)
+}
+
+
 
 
 
