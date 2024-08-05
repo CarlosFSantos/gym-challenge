@@ -285,7 +285,7 @@ td:last-child{
 
 .table-container{
     display: grid;
-    grid-template: 64px 1fr 16px / 1fr;
+    grid-template: 64px 16px / 1fr;
 }
 
 .table-container .header{
