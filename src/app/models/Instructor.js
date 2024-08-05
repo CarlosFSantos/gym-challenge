@@ -98,5 +98,30 @@ module.exports = {
 
             return callback()
         })
+    },
+    paginate(params){
+       const {filter, limit, offset, callback} = params
+
+       let query = `
+       SELECT instructors.name, instructors.services, instructors.avatar_url, count(members) AS total_students
+       FROM instructors
+       LEFT JOIN members ON (instructors.id = members.instructor_id)
+       `
+
+       if (filter){
+            query = `${query}
+            WHERE instructors.name ILIKE '%${filter}%'
+            OR instructors.services ILIKE '%${filter}%'
+            `
+       }
+       query =` ${query}
+            GROUP BY instructors.name, instructors.services, instructors.avatar_url LIMIT $1 OFFSET $2
+            `
+
+        db.query(query, [limit, offset], function(err, results){
+            if (err) throw 'Database Error!'
+
+            callback(results.rows)
+        })
     }
 }
